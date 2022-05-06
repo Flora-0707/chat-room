@@ -2,9 +2,9 @@ import { useEffect, useReducer } from 'react';
 import './App.css';
 import Login from './Login';
 import Chat from './Chat';
-import { fetchChat, fetchLogout, fetchSession } from './services';
+import { fetchChat, fetchSession } from './services';
 import ChatContext from './ChatContext';
-import { initialChatState, chatReducer } from './ChatReducer';
+import { initialChatState, chatReducer } from './ChatReducerV2';
 
 function App() {
   const [chatState, chatDispatch] = useReducer(chatReducer, initialChatState);
