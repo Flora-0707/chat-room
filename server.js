@@ -55,6 +55,13 @@ app.post('/api/session', (req, res) => {
         });
         return;
     }
+    if (roomName.length > 30) {
+        res.status(400).json({
+            error: 'wrong-room-name-length',
+            errorMsg: 'Username cannot be longer than 30.',
+        });
+        return;
+    }
     if (!username.match(/^\w+$/)) {
         res.status(403).json({
             error: 'invalid-username',
