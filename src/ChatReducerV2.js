@@ -1,10 +1,10 @@
-const initialChatState = {
+export const initialChatState = {
     isLoggedIn: false,
     username: null,
     chat: null,
 };
 
-function chatReducer(state, action) {
+export function chatReducer(state, action) {
     switch (action.type) {
         case 'logout':
             return initialChatState;
@@ -34,8 +34,3 @@ function chatReducer(state, action) {
             return state;
     }
 }
-
-module.exports = {
-    chatReducer: chatReducer,
-    initialChatState: initialChatState,
-};
