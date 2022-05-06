@@ -106,4 +106,4 @@ app.post('/api/chat', (req, res) => {
     res.json(chat.getMsg(id));
 });
 
-app.listen(PORT, () => console.log(`http://localhost:${PORT}`));
+app.listen(process.env.PORT || PORT, () => console.log(`http://localhost:${PORT}`));
