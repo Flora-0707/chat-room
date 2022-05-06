@@ -35,11 +35,24 @@ app.get('/api/session', (req, res) => {
 app.post('/api/session', (req, res) => {
     const { username, roomName } = req.body;
     if (!username) {
-        res.status(400).json({ error: 'required-username', errorMsg: 'Username cannot be empty.' });
+        res.status(400).json({
+            error: 'required-username',
+            errorMsg: 'Username cannot be empty.',
+        });
+        return;
+    }
+    if (username.length > 10) {
+        res.status(400).json({
+            error: 'wrong-username-length',
+            errorMsg: 'Username cannot be longer than 10.',
+        });
         return;
     }
     if (!roomName) {
-        res.status(400).json({ error: 'required-room-name', errorMsg: 'Room name cannot be empty.' });
+        res.status(400).json({
+            error: 'required-room-name',
+            errorMsg: 'Room name cannot be empty.',
+        });
         return;
     }
     if (!username.match(/^\w+$/)) {
