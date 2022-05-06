@@ -1,0 +1,103 @@
+.chat {
+    background-color: white;
+    font-family: 'Roboto Mono';
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    /* border: 2px solid white; */
+    border-radius: 15px;
+    /* padding: 5px; */
+}
+
+.chat-title {
+    display: flex;
+    border-bottom: 2px solid sandybrown;
+    color: sandybrown;
+    font-size: xx-large;
+    font-family: 'Pacifico', cursive;
+    padding: 0.8rem;
+}
+
+.chat-title-text {
+    display: block;
+    flex-grow: 1;
+}
+
+.logout-btn {
+    background-color: white;
+    border: 0;
+    color: sandybrown;
+    font-size: xx-large;
+    padding: 0 1rem;
+}
+
+.chat-msgs {
+    flex-grow: 1;
+    padding: 0.4rem;
+
+    /* Control snap from here */
+    overflow-y: auto;
+    overscroll-behavior-y: contain;
+    scroll-snap-type: y;
+}
+
+.chat-msgs>div:last-child {
+    scroll-snap-align: start;
+}
+
+.chat-msg {
+    display: flex;
+    margin: 0.7rem 0.5rem;
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+
+.chat-msg-self {
+    flex-direction: row-reverse;
+}
+
+.chat-msg-user {
+    padding: 0.5rem 0;
+    color: grey;
+}
+
+.chat-msg-text {
+    margin: 0rem 1rem;
+    background-color: lightgoldenrodyellow;
+    color: gray;
+    padding: 0.5rem 1rem;
+    overflow-wrap: anywhere;
+    border-radius: 8px;
+}
+
+.chat-msg-text-self {
+    background-color: rgb(212, 252, 239);
+}
+
+.chat-new-msg form {
+    display: flex;
+    font-family: 'Roboto Mono';
+}
+
+.chat-new-msg input[type=text] {
+    flex-grow: 1;
+    border-bottom-left-radius: 15px;
+    border: 0;
+    border-top: 2px solid sandybrown;
+    padding: 15px;
+}
+
+.chat-new-msg input:focus {
+    outline: none !important;
+}
+
+.chat-new-msg input[type=submit] {
+    border-bottom-right-radius: 15px;
+    border: 0;
+    border-top: 2px solid sandybrown;
+    /* border-left: 2px solid sandybrown; */
+    padding: 10px 20px;
+    background-color: lightgoldenrodyellow;
+    color: sandybrown;
+    font-family: 'Kalam';
+}
