@@ -36,6 +36,6 @@ function chatReducer(state, action) {
 }
 
 module.exports = {
-    chatReducer,
-    initialChatState,
+    chatReducer: chatReducer,
+    initialChatState: initialChatState,
 };
