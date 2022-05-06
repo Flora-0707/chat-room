@@ -4,7 +4,7 @@ import Login from './Login';
 import Chat from './Chat';
 import { fetchChat, fetchSession } from './services';
 import ChatContext from './ChatContext';
-import { initialChatState, chatReducer } from './ChatReducerV2';
+import { initialChatState, chatReducer } from './ChatReducer';
 
 function App() {
   const [chatState, chatDispatch] = useReducer(chatReducer, initialChatState);
